@@ -81,10 +81,10 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
                     JSONObject p = previsions.getJSONObject(i);
 
                     String timestamp = p.getString("dt");
-                    DateFormat format = new SimpleDateFormat("MMddyyHHmmss");
+                    DateFormat sf = new SimpleDateFormat("dd/MM/yyyy 'à' HH");
                     Date date = new Date(Long.parseLong(timestamp)*1000);
 
-                    String dt = date.toString();
+                    String dt = sf.format(date);
 
                     // Phone node is JSON Object
 
