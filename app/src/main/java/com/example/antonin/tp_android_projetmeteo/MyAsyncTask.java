@@ -19,7 +19,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 import static android.app.PendingIntent.getActivity;
@@ -28,7 +31,6 @@ import static java.security.AccessController.getContext;
 /**
  * Created by Antonin on 01/04/2017.
  */
-//http://api.openweathermap.org/data/2.5/forecast?q=villeurbanne,69100&APPID=910f0c05f62e5508a3428198252eed06&units=metric
 
 public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
     ListView lv;
@@ -59,7 +61,7 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
     @Override
     protected Object doInBackground(Object... params) {
         HttpHandler sh = new HttpHandler();
-        ArrayList contactList = (ArrayList) params[0];
+        ArrayList previsionsList = (ArrayList) params[0];
         String url = (String) params[1];
         lv = (ListView) params[2];
         // Making a request to url and getting response
@@ -72,37 +74,39 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
                 JSONObject jsonObj = new JSONObject(jsonStr);
 
                 // Getting JSON Array node
-                JSONArray contacts = jsonObj.getJSONArray("contacts");
+                JSONArray previsions = jsonObj.getJSONArray("list");
 
                 // looping through All Contacts
-                for (int i = 0; i < contacts.length(); i++) {
-                    JSONObject c = contacts.getJSONObject(i);
+                for (int i = 0; i < previsions.length(); i++) {
+                    JSONObject p = previsions.getJSONObject(i);
 
-                    String id = c.getString("id");
-                    String name = c.getString("name");
-                    String email = c.getString("email");
-                    String address = c.getString("address");
-                    String gender = c.getString("gender");
+                    String timestamp = p.getString("dt");
+                    DateFormat format = new SimpleDateFormat("MMddyyHHmmss");
+                    Date date = new Date(Long.parseLong(timestamp)*1000);
+
+                    String dt = date.toString();
 
                     // Phone node is JSON Object
-                    JSONObject phone = c.getJSONObject("phone");
+
+                    /*
+                    JSONObject phone = p.getJSONObject("phone");
                     String mobile = phone.getString("mobile");
                     String home = phone.getString("home");
                     String office = phone.getString("office");
 
+                    */
+
                     // tmp hash map for single contact
-                    HashMap<String, String> contact = new HashMap<>();
+                    HashMap<String, String> prevision = new HashMap<>();
 
                     // adding each child node to HashMap key => value
-                    contact.put("id", id);
-                    contact.put("name", name);
-                    contact.put("email", email);
-                    contact.put("mobile", mobile);
+                    prevision.put("dt", dt);
+                    //prevision.put("mobile", mobile);
 
                     // adding contact to contact list
-                    contactList.add(contact);
+                    previsionsList.add(prevision);
                 }
-                return contactList;
+                return previsionsList;
             } catch (final JSONException e) {
                 Log.e(TAG, "Json parsing error: " + e.getMessage());
                 /*
@@ -145,12 +149,12 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
         /**
          * Updating parsed JSON data into ListView
          * */
-        ArrayList contactList = (ArrayList) result;
+        ArrayList previsionsList = (ArrayList) result;
         ListAdapter adapter = new SimpleAdapter(
-                mContext, contactList,
-                R.layout.list_item, new String[]{"name", "email",
-                "mobile"}, new int[]{R.id.name,
-                R.id.email, R.id.mobile});
+                mContext, previsionsList,
+                R.layout.list_item, new String[]{"dt"/*, "email",
+                "mobile"*/}, new int[]{R.id.dt/*,
+                R.id.email, R.id.mobile*/});
 
         lv.setAdapter(adapter);
     }
