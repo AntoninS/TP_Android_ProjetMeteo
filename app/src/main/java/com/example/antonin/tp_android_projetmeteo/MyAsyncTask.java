@@ -71,40 +71,44 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
 
         if (jsonStr != null) {
             try {
+                Meteo donneesMeteo;
                 JSONObject jsonObj = new JSONObject(jsonStr);
+                JSONObject details, main, sys, oneValueListJSON;
 
                 // Getting JSON Array node
                 JSONArray previsions = jsonObj.getJSONArray("list");
 
                 // looping through All Contacts
                 for (int i = 0; i < previsions.length(); i++) {
-                    JSONObject p = previsions.getJSONObject(i);
 
+                    JSONObject p = previsions.getJSONObject(i);
+                    details = p.getJSONArray("weather").getJSONObject(0);
+                    main = p.getJSONObject("main");
+                    sys = p.getJSONObject("sys");
+
+                    //new object for new forecast
+                    donneesMeteo = new Meteo();
+
+                    donneesMeteo.setDate(p.getLong("dt"));
+                    donneesMeteo.setHumidite(main.getString("humidity"));
+                    donneesMeteo.setPression(main.getString("pressure"));
+                    donneesMeteo.setTemperature(main.getDouble("temp"));
+                    //donneesMeteo.setIcone(details.getInt("id"),weatherFragmentActivity);
+
+
+
+
+
+                    /*
                     String timestamp = p.getString("dt");
                     DateFormat sf = new SimpleDateFormat("dd/MM/yyyy 'à' HH");
                     Date date = new Date(Long.parseLong(timestamp)*1000);
 
                     String dt = sf.format(date);
-
-                    // Phone node is JSON Object
-
-                    /*
-                    JSONObject phone = p.getJSONObject("phone");
-                    String mobile = phone.getString("mobile");
-                    String home = phone.getString("home");
-                    String office = phone.getString("office");
-
                     */
 
-                    // tmp hash map for single contact
-                    HashMap<String, String> prevision = new HashMap<>();
-
-                    // adding each child node to HashMap key => value
-                    prevision.put("dt", dt);
-                    //prevision.put("mobile", mobile);
-
                     // adding contact to contact list
-                    previsionsList.add(prevision);
+                    previsionsList.add(donneesMeteo);
                 }
                 return previsionsList;
             } catch (final JSONException e) {
