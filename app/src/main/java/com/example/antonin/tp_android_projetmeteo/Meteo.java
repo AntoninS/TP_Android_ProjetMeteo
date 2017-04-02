@@ -9,7 +9,7 @@ import java.util.Date;
  */
 
 public class Meteo {
-    private Long date;
+    public String date;
     private String humidite;
     private String pression;
     private Double temperature;
@@ -22,7 +22,7 @@ public class Meteo {
         this.temperature = null;
     }
 
-    public Meteo(Long newDate, String newHumidite, String newPression, Double newTemperature)
+    public Meteo(String newDate, String newHumidite, String newPression, Double newTemperature)
     {
         this.date = newDate;
         this.humidite = newHumidite;
@@ -31,7 +31,8 @@ public class Meteo {
     }
 
 
-    public String getUpdateTimeToString() {
+    public String getDateBonFormat(Long dateFormatTimestamp) {
+        /*
         DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
         String updatedOn = df.format(new Date(this.date*1000));
 
@@ -40,14 +41,20 @@ public class Meteo {
             updatedOn = "0" + updatedOn;
         }
         return updatedOn;
+        */
+        String timestamp = dateFormatTimestamp.toString();
+        DateFormat sf = new SimpleDateFormat("dd/MM/yyyy 'à' HH'h'");
+        Date date = new Date(Long.parseLong(timestamp)*1000);
+        String dateBonFormat = sf.format(date);
+        return dateBonFormat;
     }
 
-    public Long getDate(){
+    public String getDate(){
         return this.date;
     }
 
     public void setDate(Long date) {
-        this.date = date;
+        this.date = getDateBonFormat(date);
     }
 
     /*

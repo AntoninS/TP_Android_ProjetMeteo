@@ -1,5 +1,6 @@
 package com.example.antonin.tp_android_projetmeteo;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -35,9 +36,11 @@ import static java.security.AccessController.getContext;
 public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
     ListView lv;
     private Context mContext;
+    public MainActivity activity;
 
-    public MyAsyncTask (Context context){
+    public MyAsyncTask (Context context, MainActivity a){
         mContext = context;
+        this.activity = a;
     }
 
 
@@ -71,7 +74,6 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
 
         if (jsonStr != null) {
             try {
-                Meteo donneesMeteo;
                 JSONObject jsonObj = new JSONObject(jsonStr);
                 JSONObject details, main, sys, oneValueListJSON;
 
@@ -87,7 +89,7 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
                     sys = p.getJSONObject("sys");
 
                     //new object for new forecast
-                    donneesMeteo = new Meteo();
+                    Meteo donneesMeteo = new Meteo();
 
                     donneesMeteo.setDate(p.getLong("dt"));
                     donneesMeteo.setHumidite(main.getString("humidity"));
@@ -154,12 +156,17 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
          * Updating parsed JSON data into ListView
          * */
         ArrayList previsionsList = (ArrayList) result;
+
+        /*
         ListAdapter adapter = new SimpleAdapter(
                 mContext, previsionsList,
-                R.layout.list_item, new String[]{"dt"/*, "email",
-                "mobile"*/}, new int[]{R.id.dt/*,
-                R.id.email, R.id.mobile*/});
+                R.layout.list_item, new String[]{"dt", "email", "mobile"},
+                new int[]{R.id.dt, R.id.email, R.id.mobile});
 
+        lv.setAdapter(adapter);
+        */
+
+        AdapterMeteo adapter = new AdapterMeteo (activity, 0, previsionsList);
         lv.setAdapter(adapter);
     }
 
