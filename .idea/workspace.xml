@@ -16,9 +16,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e026fcf2-1060-49d4-95de-ff341bfbc50b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/AdapterMeteo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/AdapterMeteo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/Meteo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/Meteo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" />
     </list>
     <ignored path="TP_Android_ProjetMeteo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,20 +65,33 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="157">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1120#1127#0" expanded="true" />
+                <element signature="e#1365#1372#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MyAsyncTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="1347">
               <caret line="91" column="45" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1923,15 +1935,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/HttpHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/Weather.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/Meteo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/AdapterMeteo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -2046,6 +2058,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2386,7 +2402,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2452,7 +2468,7 @@
           <caret line="13" column="153" selection-start-line="13" selection-start-column="153" selection-end-line="13" selection-end-column="153" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1120#1127#0" expanded="true" />
+            <element signature="e#1365#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2491,7 +2507,7 @@
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1120#1127#0" expanded="true" />
+            <element signature="e#1365#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2556,7 +2572,7 @@
           <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1120#1127#0" expanded="true" />
+            <element signature="e#1365#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2617,37 +2633,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/HttpHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-387">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="91" column="45" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1491139479238" expanded="false" signature="3800:3886" ph="(Runnable) () → {" />
-            <marker date="1491139479238" expanded="false" signature="4132:4155" ph="}" />
-            <marker date="1491139479238" expanded="false" signature="4307:4385" ph="(Runnable) () → {" />
-            <marker date="1491139479238" expanded="false" signature="4638:4657" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2693,13 +2684,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="1347">
+          <caret line="91" column="45" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1120#1127#0" expanded="true" />
+            <marker date="1491139479238" expanded="false" signature="3800:3886" ph="(Runnable) () → {" />
+            <marker date="1491139479238" expanded="false" signature="4132:4155" ph="}" />
+            <marker date="1491139479238" expanded="false" signature="4307:4385" ph="(Runnable) () → {" />
+            <marker date="1491139479238" expanded="false" signature="4638:4657" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1365#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
