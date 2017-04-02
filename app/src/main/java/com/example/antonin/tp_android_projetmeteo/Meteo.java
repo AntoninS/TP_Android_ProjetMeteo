@@ -13,7 +13,7 @@ public class Meteo {
     public String temps;
     private String humidite;
     private String pression;
-    private Double temperature;
+    public Double temperature;
 
 
     public Meteo(){

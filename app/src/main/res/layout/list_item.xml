@@ -21,12 +21,12 @@
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textColor="@color/colorAccent" />
-<!--
+
     <TextView
-        android:id="@+id/mobile"
+        android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#5d5d5d"
         android:textStyle="bold" />
--->
+
 </LinearLayout>

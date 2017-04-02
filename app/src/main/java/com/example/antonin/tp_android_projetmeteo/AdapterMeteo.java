@@ -47,6 +47,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
     public static class ViewHolder {
         public TextView display_date;
         public TextView display_temps;
+        public TextView display_temperature;
 
     }
 
@@ -60,6 +61,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
 
                 holder.display_date = (TextView) lv.findViewById(R.id.dt);
                 holder.display_temps = (TextView) lv.findViewById(R.id.temps);
+                holder.display_temperature = (TextView) lv.findViewById(R.id.temperature);
 
 
                 lv.setTag(holder);
@@ -71,6 +73,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
 
             holder.display_date.setText(previsionsList.get(position).date);
             holder.display_temps.setText(previsionsList.get(position).temps);
+            holder.display_temperature.setText(previsionsList.get(position).temperature.toString());
 
 
         } catch (Exception e) {
