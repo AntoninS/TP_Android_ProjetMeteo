@@ -10,6 +10,7 @@ import java.util.Date;
 
 public class Meteo {
     public String date;
+    public String temps;
     private String humidite;
     private String pression;
     private Double temperature;
@@ -17,14 +18,16 @@ public class Meteo {
 
     public Meteo(){
         this.date = null;
+        this.temps = null;
         this.humidite = null;
         this.pression = null;
         this.temperature = null;
     }
 
-    public Meteo(String newDate, String newHumidite, String newPression, Double newTemperature)
+    public Meteo(String newDate, String newTemps, String newHumidite, String newPression, Double newTemperature)
     {
         this.date = newDate;
+        this.temps = newTemps;
         this.humidite = newHumidite;
         this.pression = newPression;
         this.temperature = newTemperature;
@@ -55,6 +58,12 @@ public class Meteo {
 
     public void setDate(Long date) {
         this.date = getDateBonFormat(date);
+    }
+
+    public String getTemps() { return this.temps; }
+
+    public void setTemps(String temps) {
+        this.temps = temps;
     }
 
     /*
