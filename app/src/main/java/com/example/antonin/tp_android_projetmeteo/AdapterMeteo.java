@@ -73,7 +73,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
 
             holder.display_date.setText(previsionsList.get(position).date);
             holder.display_temps.setText(previsionsList.get(position).temps);
-            holder.display_temperature.setText(previsionsList.get(position).temperature.toString());
+            holder.display_temperature.setText(previsionsList.get(position).temperature.toString() + "°C");
 
 
         } catch (Exception e) {
