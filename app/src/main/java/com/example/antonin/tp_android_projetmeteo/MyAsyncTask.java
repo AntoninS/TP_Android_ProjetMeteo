@@ -129,7 +129,7 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
          * */
         ArrayList previsionsList = (ArrayList) result;
 
-        AdapterMeteo adapter = new AdapterMeteo (activity, 0, previsionsList);
+        AdapterMeteo adapter = new AdapterMeteo (mContext, activity, 0, previsionsList);
         lv.setAdapter(adapter);
     }
 

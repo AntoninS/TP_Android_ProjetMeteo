@@ -6,7 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -15,13 +18,15 @@ import java.util.ArrayList;
  */
 
 public class AdapterMeteo extends ArrayAdapter<Meteo> {
+    private Context context;
     private Activity activity;
     private ArrayList<Meteo> previsionsList;
     private static LayoutInflater inflater = null;
 
-    public AdapterMeteo (Activity activity, int textViewResourceId,ArrayList<Meteo> newPrevisionsList) {
-        super(activity, textViewResourceId, newPrevisionsList);
+    public AdapterMeteo (Context context, Activity activity, int textViewResourceId,ArrayList<Meteo> newPrevisionsList) {
+        super( activity, textViewResourceId, newPrevisionsList);
         try {
+            this.context = context;
             this.activity = activity;
             this.previsionsList = newPrevisionsList;
 
@@ -48,6 +53,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
         public TextView display_date;
         public TextView display_temps;
         public TextView display_temperature;
+        public ImageView display_IconeTemps;
 
     }
 
@@ -62,6 +68,7 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
                 holder.display_date = (TextView) lv.findViewById(R.id.dt);
                 holder.display_temps = (TextView) lv.findViewById(R.id.temps);
                 holder.display_temperature = (TextView) lv.findViewById(R.id.temperature);
+                holder.display_IconeTemps = (ImageView) lv.findViewById(R.id.iconeTemps);
 
 
                 lv.setTag(holder);
@@ -74,7 +81,12 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
             holder.display_date.setText(previsionsList.get(position).date);
             holder.display_temps.setText(previsionsList.get(position).temps);
             holder.display_temperature.setText(previsionsList.get(position).temperature.toString() + "°C");
-
+            //holder.display_IconeTemps.setI(previsionsList.get(position).temperature.toString() + "°C");
+            Picasso
+                    .with(context)
+                    .load("http://openweathermap.org/img/w/10d.png")
+                    .resize(200,200)
+                    .into(holder.display_IconeTemps);
 
         } catch (Exception e) {
 
