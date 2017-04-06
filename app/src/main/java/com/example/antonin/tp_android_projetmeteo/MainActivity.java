@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         lv = (ListView) findViewById(R.id.list);
 
-        new MyAsyncTask(this, this).execute(previsionsList, url, lv);
+        if (isNetworkConnected()){
+            new MyAsyncTask(this, this).execute(previsionsList, url, lv);
+        }
+        else {
+            Toast.makeText(this, "Vous n'êtes pas connecté à internet !", Toast.LENGTH_LONG).show();
+        }
     }
 }
