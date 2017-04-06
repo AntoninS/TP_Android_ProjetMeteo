@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#454545">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/KOKOPELLI_METEO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KOKOPELLI METEO"
+        android:layout_above="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="antonin.spontak@gmail.com"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_kokopelli" />
+
+</RelativeLayout>
