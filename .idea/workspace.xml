@@ -16,7 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e026fcf2-1060-49d4-95de-ff341bfbc50b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java" />
     </list>
     <ignored path="TP_Android_ProjetMeteo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +48,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -61,22 +61,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/NetworkUtil.java">
+      <file leaf-file-name="SplashScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/SplashScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkChangeReceiver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/NetworkChangeReceiver.java">
+      <file leaf-file-name="MyAsyncTask.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="663">
+              <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+                <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+                <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+                <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1886,7 +1894,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/Meteo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/AdapterMeteo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/SplashScreen/java.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/background.xml" />
@@ -1897,6 +1904,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/SplashScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java" />
       </list>
     </option>
   </component>
@@ -2481,10 +2489,10 @@
           <caret line="91" column="45" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2547,10 +2555,10 @@
           <caret line="91" column="45" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2603,10 +2611,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2638,10 +2646,10 @@
           <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2702,10 +2710,10 @@
           <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2852,16 +2860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/SplashScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -2893,20 +2891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1491492362823" expanded="false" signature="2875:2961" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3207:3230" ph="}" />
-            <marker date="1491492362823" expanded="false" signature="3382:3460" ph="(Runnable) () → {" />
-            <marker date="1491492362823" expanded="false" signature="3713:3732" ph="}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/NetworkUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -2930,6 +2914,30 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1135#1142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/SplashScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/antonin/tp_android_projetmeteo/MyAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1491500712552" expanded="false" signature="2883:2969" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3215:3238" ph="}" />
+            <marker date="1491500712552" expanded="false" signature="3390:3468" ph="(Runnable) () → {" />
+            <marker date="1491500712552" expanded="false" signature="3721:3740" ph="}" />
           </folding>
         </state>
       </provider>

@@ -38,7 +38,7 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
         super.onPreExecute();
         // Showing progress dialog
         pDialog = new ProgressDialog(mContext);
-        pDialog.setMessage("Please wait...");
+        pDialog.setMessage("Merci de patienter....");
         pDialog.setCancelable(false);
         pDialog.show();
 
