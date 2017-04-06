@@ -11,8 +11,6 @@ import java.util.Date;
 public class Meteo {
     public String date;
     public String temps;
-    private String humidite;
-    private String pression;
     public Double temperature;
     public String iconeTemps;
 
@@ -20,18 +18,14 @@ public class Meteo {
     public Meteo(){
         this.date = null;
         this.temps = null;
-        this.humidite = null;
-        this.pression = null;
         this.temperature = null;
         this.iconeTemps = null;
     }
 
-    public Meteo(String newDate, String newTemps, String newHumidite, String newPression, Double newTemperature, String newIconeTemps)
+    public Meteo(String newDate, String newTemps, Double newTemperature, String newIconeTemps)
     {
         this.date = newDate;
         this.temps = newTemps;
-        this.humidite = newHumidite;
-        this.pression = newPression;
         this.temperature = newTemperature;
         this.iconeTemps = newIconeTemps;
     }
@@ -63,7 +57,7 @@ public class Meteo {
 
     public void setIconeTemps(int idIconeTemps) {
         String iconeTemporaire = "";
-        
+
         if( idIconeTemps == 800){
             iconeTemporaire = "http://openweathermap.org/img/w/01d.png";
         } else {
@@ -86,34 +80,10 @@ public class Meteo {
         }
         this.iconeTemps = iconeTemporaire;
     }
-    /*
-    public String getIcone() {
-        return icone;
-    }
 
-    public void setIcone(int actualId, Activity iconAsset) {
-        this.setWeatherIcon(actualId, iconAsset);
-    }
-    */
+    public String getTemperature() {
 
-    public String getHumidite() {
-        return humidite;
-    }
-
-    public void setHumidite(String humidite) {
-        this.humidite = humidite;
-    }
-
-    public String getPression() {
-        return pression;
-    }
-
-    public void setPression(String pression) {
-        this.pression = pression;
-    }
-
-    public Double getTemperature() {
-        return temperature;
+        return temperature.toString() + "°C";
     }
 
     public void setTemperature(Double temperature) {

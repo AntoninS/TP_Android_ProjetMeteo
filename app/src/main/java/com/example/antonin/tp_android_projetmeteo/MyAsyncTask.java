@@ -76,8 +76,6 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
 
                     donneesMeteo.setDate(p.getLong("dt"));
                     donneesMeteo.setTemps(details.getString("description"));
-                    donneesMeteo.setHumidite(main.getString("humidity"));
-                    donneesMeteo.setPression(main.getString("pressure"));
                     donneesMeteo.setTemperature(main.getDouble("temp"));
                     donneesMeteo.setIconeTemps(details.getInt("id"));
                     //donneesMeteo.setIcone(details.getInt("id"),weatherFragmentActivity);

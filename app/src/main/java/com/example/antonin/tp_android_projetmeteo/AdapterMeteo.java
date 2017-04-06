@@ -78,9 +78,9 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
 
 
 
-            holder.display_date.setText(previsionsList.get(position).date);
-            holder.display_temps.setText(previsionsList.get(position).temps);
-            holder.display_temperature.setText(previsionsList.get(position).temperature.toString() + "°C");
+            holder.display_date.setText(previsionsList.get(position).getDate());
+            holder.display_temps.setText(previsionsList.get(position).getTemps());
+            holder.display_temperature.setText(previsionsList.get(position).getTemperature());
 
             Picasso
                     .with(context)
