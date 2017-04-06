@@ -14,6 +14,7 @@ public class Meteo {
     private String humidite;
     private String pression;
     public Double temperature;
+    public String iconeTemps;
 
 
     public Meteo(){
@@ -22,15 +23,17 @@ public class Meteo {
         this.humidite = null;
         this.pression = null;
         this.temperature = null;
+        this.iconeTemps = null;
     }
 
-    public Meteo(String newDate, String newTemps, String newHumidite, String newPression, Double newTemperature)
+    public Meteo(String newDate, String newTemps, String newHumidite, String newPression, Double newTemperature, String newIconeTemps)
     {
         this.date = newDate;
         this.temps = newTemps;
         this.humidite = newHumidite;
         this.pression = newPression;
         this.temperature = newTemperature;
+        this.iconeTemps = newIconeTemps;
     }
 
 
@@ -56,6 +59,33 @@ public class Meteo {
         this.temps = temps;
     }
 
+    public String getIconeTemps() { return this.iconeTemps; }
+
+    public void setIconeTemps(int idIconeTemps) {
+        String iconeTemporaire = "";
+        
+        if( idIconeTemps == 800){
+            iconeTemporaire = "http://openweathermap.org/img/w/01d.png";
+        } else {
+            int id = idIconeTemps / 100;
+            switch(id) {
+                case 2 : iconeTemporaire = "http://openweathermap.org/img/w/11d.png";
+                    break;
+                case 3 : iconeTemporaire = "http://openweathermap.org/img/w/09d.png";
+                    break;
+                case 5 : iconeTemporaire = "http://openweathermap.org/img/w/10d.png";
+                    break;
+                case 6 : iconeTemporaire = "http://openweathermap.org/img/w/13d.png";
+                    break;
+                case 7 : iconeTemporaire = "http://openweathermap.org/img/w/50d.png";
+                    break;
+                case 8 : iconeTemporaire = "http://openweathermap.org/img/w/02d.png";
+                    break;
+
+            }
+        }
+        this.iconeTemps = iconeTemporaire;
+    }
     /*
     public String getIcone() {
         return icone;

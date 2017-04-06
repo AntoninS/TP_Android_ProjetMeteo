@@ -81,10 +81,10 @@ public class AdapterMeteo extends ArrayAdapter<Meteo> {
             holder.display_date.setText(previsionsList.get(position).date);
             holder.display_temps.setText(previsionsList.get(position).temps);
             holder.display_temperature.setText(previsionsList.get(position).temperature.toString() + "°C");
-            //holder.display_IconeTemps.setI(previsionsList.get(position).temperature.toString() + "°C");
+
             Picasso
                     .with(context)
-                    .load("http://openweathermap.org/img/w/10d.png")
+                    .load(previsionsList.get(position).getIconeTemps())
                     .resize(200,200)
                     .into(holder.display_IconeTemps);
 
