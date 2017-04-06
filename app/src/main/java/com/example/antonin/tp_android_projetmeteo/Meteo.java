@@ -35,16 +35,6 @@ public class Meteo {
 
 
     public String getDateBonFormat(Long dateFormatTimestamp) {
-        /*
-        DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-        String updatedOn = df.format(new Date(this.date*1000));
-
-        //add 0 at the beginning if day < 10
-        if(updatedOn.charAt(1) == ' '){
-            updatedOn = "0" + updatedOn;
-        }
-        return updatedOn;
-        */
         String timestamp = dateFormatTimestamp.toString();
         DateFormat sf = new SimpleDateFormat("dd/MM/yyyy 'à' HH'h'");
         Date date = new Date(Long.parseLong(timestamp)*1000);

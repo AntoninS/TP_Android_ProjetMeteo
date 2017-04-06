@@ -1,33 +1,16 @@
 package com.example.antonin.tp_android_projetmeteo;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-
-import static android.app.PendingIntent.getActivity;
-import static java.security.AccessController.getContext;
 
 /**
  * Created by Antonin on 01/04/2017.
@@ -98,18 +81,6 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
                     donneesMeteo.setTemperature(main.getDouble("temp"));
                     //donneesMeteo.setIcone(details.getInt("id"),weatherFragmentActivity);
 
-
-
-
-
-                    /*
-                    String timestamp = p.getString("dt");
-                    DateFormat sf = new SimpleDateFormat("dd/MM/yyyy 'à' HH");
-                    Date date = new Date(Long.parseLong(timestamp)*1000);
-
-                    String dt = sf.format(date);
-                    */
-
                     // adding contact to contact list
                     previsionsList.add(donneesMeteo);
                 }
@@ -157,15 +128,6 @@ public class MyAsyncTask extends AsyncTask<Object,Void,Object> {
          * Updating parsed JSON data into ListView
          * */
         ArrayList previsionsList = (ArrayList) result;
-
-        /*
-        ListAdapter adapter = new SimpleAdapter(
-                mContext, previsionsList,
-                R.layout.list_item, new String[]{"dt", "email", "mobile"},
-                new int[]{R.id.dt, R.id.email, R.id.mobile});
-
-        lv.setAdapter(adapter);
-        */
 
         AdapterMeteo adapter = new AdapterMeteo (activity, 0, previsionsList);
         lv.setAdapter(adapter);
